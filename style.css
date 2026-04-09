@@ -126,6 +126,7 @@ header{
 
 .img-item img{
     width: 100%;
+    max-width: 140px;
     height: 100%;
     object-fit: cover;
     display: block;
@@ -520,6 +521,19 @@ footer a{
         box-sizing: border-box;
         font-size: 16px !important;
         border-radius: 10px;
+    }
+
+    #dataHora{
+        width: 100% !important;
+        max-width: 100%;
+        min-height: 35px;
+        line-height: normal;
+        display: block;
+        box-sizing: border-box;
+        padding: 8px 10px;
+        font-size: 16px;
+        -webkit-appearance: none;
+        appearance: none;
     }
 
     #listaPedido{

@@ -1,0 +1,556 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(231, 231, 231);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.categoria{
+    text-transform: uppercase
+    ;
+    padding-bottom: 5px;
+    text-align: center;
+    margin-top: 20px;
+    border-bottom: 3px solid green;
+    font-size: 2.3em;
+}
+
+select{
+    color: black;
+    background-color: white;
+    -webkit-text-fill-color: black;
+}
+
+
+/*===== INÍCIO HEADER ====*/
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background: url(images/Petiscos\ brasileiros\ em\ cesto\ rústico.png) no-repeat center;
+    background-size: cover;
+}
+
+#conteudo-header{
+    width: 60%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px 25px 35px 25px;
+    text-align: center;
+    border: 1px solid black;
+    height: 150px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.logo-padaria{
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1em;
+}
+
+.logo-padaria img{
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+}
+
+.horario-logo p{
+    margin: 5px 0px;
+}
+
+.horario-logo span{
+    text-decoration: underline;
+}
+
+.horario-logo-domingo{
+    font-weight: bold;
+}
+
+#conteudo-header-info{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+#conteudo-header-info a{
+    font-size: 1.2em;
+}
+
+#conteudo-header-info a:hover{
+    color: green;
+    transition: 0.3s;
+    text-decoration: underline  ;
+}
+
+/*===== FIM HEADER ====*/
+
+
+
+/*===== INÍCIO CONTEÚDO ====*/
+#conteudo{
+    background-color: rgb(231, 231, 231);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.conteudo-itens{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    justify-content: center;
+}
+
+.item{
+    display: flex;
+    width: 20%;
+    min-width: 300px;
+    height: 180px;
+    border: 2px solid rgba(0, 0, 0, 0.151);
+    border-radius: 20px;
+    background-color: white;
+}
+
+.img-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.info-item{
+    margin: 10px;
+    max-width: 50%;
+    text-align: center;
+}
+
+.item h2{
+    font-size: 1em;
+    margin-bottom: 5px;
+    height: 2em;
+}
+
+.info-item p{
+    margin-top: 10px;
+}
+
+.item p, .item label, .item input{
+    margin-bottom: 10px;
+    font-size: 0.8em;
+}
+
+.item input{
+    border: none;
+    border-bottom: 1px solid black;
+    text-align: center;
+    outline: none;
+}
+
+.item input{
+    width: 140px;
+}
+
+.selecione-sabor-massa{
+    margin-bottom: 10px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.item button{
+    width: 140px;
+    border-radius: 20px;
+    background-color: green;
+    color: white;
+    padding: 3px;
+    border: 1px solid rgb(2, 61, 2);
+    cursor: pointer;
+}
+
+.item button:hover{
+    background-color: #fff;
+    color: green;
+    border: 1px solid green;
+    transition: 0.3s;
+}
+
+/*===== FIM CONTEÚDO ====*/
+
+/*==== INÍCIO INFORMAÇÕES PEDIDO ====*/
+#informacoes-pedido{
+    background-color: green;
+    padding: 30px;
+    color: white;
+    text-align: center;
+}
+
+#informacoes-pedido h2{
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+#pedido-conteudo{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+#pedido-conteudo div #tipoPedido, #pagamento, #campoEndereco{
+    padding: 4px;
+}
+
+#informacoes-pedido input, select{
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: white;
+    margin:  0;
+}
+
+#totalGeral{
+    border-bottom: 1px solid white;
+}
+
+#informacoes-pedido #dataHora, #btnWhatsapp{
+    padding: 4px 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: white;
+    margin:  0;
+}
+
+
+#campoEndereco{
+    display: none;
+    align-items: center;
+    gap: 10px;
+}
+
+#campoEndereco label{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#campoEndereco input{
+    margin: 0;
+    width: 300px;
+    flex: 1;
+}
+
+#telefoneCliente{
+    width: 110px;
+}
+
+#dataHora, #tipoPedido, #pagamento{
+    cursor: pointer;
+}
+
+#listaPedido{
+    width: 360px;
+    font-size: 0.8em;
+    background: white;
+    color: black;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 10px;    
+    text-align: left;
+    min-height: 60px;
+}
+
+#btnWhatsapp{
+    cursor: pointer;
+}
+
+#btnWhatsapp:hover{
+    background-color: green;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: 0.3s;
+}
+
+#notificacaoAdicionado{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: green;
+    color: white;
+    padding: 15px 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 9999;
+}
+
+.aviso-tortas{
+    margin-top: 20px;
+}
+
+/*==== FIM INFORMAÇÕES PEDIDO ====*/
+
+footer{
+    background-color: gray;
+    text-align: center;
+    padding: 5px;
+}
+
+footer a{
+    margin: 0px 5px;
+}
+
+/*==== RESPONSIVIDADE ====*/
+
+@media (max-width: 1350px) {
+    header{
+        height: 220px;
+        padding: 20px;
+    }
+
+    #conteudo-header{
+        width: 85%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .logo-padaria{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+
+    .logo-padaria img{
+        max-width: 280px;
+    }
+
+    .horario-logo{
+        font-size: 0.9em;
+        text-align: right;
+        text-align: center;
+    }
+
+    #conteudo-header-info{
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    #conteudo-header-info a{
+        font-size: 0.95em;
+    }
+
+    .categoria{
+        font-size: 2em;
+    }
+
+    .item{
+        width: 45%;
+        min-width: 0;
+    }
+}
+
+/*==== Telefone ====*/
+
+@media (max-width: 768px){
+
+    header{
+        height: auto;
+        padding: 20px 0;
+    }
+
+    #conteudo-header{
+        width: 80%;
+        height: auto;
+        padding: 20px;
+    }
+    
+
+    .logo-padaria{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo-padaria img{
+        max-width: 250px;
+    }
+
+    #conteudo-header-info{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #conteudo-header-info a{
+        font-size: 0.95em;
+    }
+
+    #conteudo{
+        width: 95%;
+    }
+
+    .categoria{
+        font-size: 1.6em;
+    }
+
+    .conteudo-itens{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item{
+        width: 95%;
+        min-width: auto;
+        height: 165px;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+    }
+
+    .img-item{
+        width: 35%;
+        height: auto;
+    }
+
+    .img-item img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px 0 0 20px;
+    }
+
+    .info-item{
+        width: 65%;
+        max-width: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    .item h2{
+        font-size: 0.9em;
+        margin: 0px 0px 4px 0px;
+        line-height: 1.1;
+    }
+
+    .info-item p{
+        margin: 2px 0;
+        font-size: 0.8em;
+    }
+
+    .info-item input{
+        margin: 0px 0px 4px;
+    }
+
+    .selecione-sabor-massa,
+    .item input,
+    .item button{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 6px;
+    }
+
+    .item input,
+    .selecione-sabor-massa{
+        font-size: 16px;
+    }
+
+    .item button{
+        font-size: 14px;
+    }
+
+    #pedido-conteudo{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        width: 100%;
+    }
+
+    #pedido-conteudo > div:not(#campoEndereco){
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 6px;
+    }
+
+    #pedido-conteudo label{
+        margin-bottom: 5px;
+        text-align: left;
+        font-size: 0.95em;
+    }
+
+    #pedido-conteudo input,
+    #pedido-conteudo select{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #pedido-conteudo input,
+    #pedido-conteudo select,
+    #pedido-conteudo #dataHora{
+        width: 100%;
+        height: 35px;
+        padding: 8px 10px;
+        box-sizing: border-box;
+        font-size: 16px !important;
+        border-radius: 10px;
+    }
+
+    #listaPedido{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #campoEndereco{
+        display: none; 
+        align-items: start;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        gap: 0;
+    }
+
+    #campoEndereco input{
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    #notificacaoAdicionado{
+        right: 10px;
+        left: 10px;
+        bottom: 20px;
+        text-align: center;
+    }
+
+    footer{
+        font-size: 0.9em;
+        padding: 15px;
+    }
+}
+

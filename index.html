@@ -6,6 +6,7 @@
     <title>Tia Bia</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="images/Padaria e Confeitaria Tia Bia icone site.png" type="image/png">
 </head>
 <body>
     <main> <!--Início Main-->
@@ -35,6 +36,7 @@
                         <p>R$ 1,00 unidade</p>
 
                         <select id="selecionePastelMilanesa" class="selecione-sabor-massa">
+                            <option value="" selected disabled>Escolha o recheio</option>
                             <option value="Carne">Carne</option>
                             <option value="Frango">Frango</option>
                             <option value="Frios">Frios</option>
@@ -44,7 +46,7 @@
                             <option value="Brócolis e Queijo">Brócolis e Queijo</option>
                         </select>
 
-                        <input type="number" id="qtdPastelMilanesa" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdPastelMilanesa" min="1">
 
                         <button onclick="adicionarPedido('Pastel Milanesa', 'selecionePastelMilanesa', 'qtdPastelMilanesa', 1.00)"> Adicionar </button>
                     </div>
@@ -59,6 +61,7 @@
                         <p>R$ 1,00 unidade</p>
 
                         <select id="selecionePastelSimples" class="selecione-sabor-massa">
+                            <option value="" selected disabled>Escolha o recheio</option>
                             <option value="Carne">Carne</option>
                             <option value="Frango">Frango</option>
                             <option value="Frios">Frios</option>
@@ -68,7 +71,7 @@
                             <option value="Brócolis e Queijo">Brócolis e Queijo</option>
                         </select>
 
-                        <input type="number" id="qtdPastelSimples" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdPastelSimples" min="1">
 
                         <button onclick="adicionarPedido('Pastel Simples', 'selecionePastelSimples', 'qtdPastelSimples', 1.00)"> Adicionar </button>
                     </div>
@@ -83,6 +86,7 @@
                         <p>R$ 1,00 unidade</p>
 
                         <select id="selecionePastelAssado" class="selecione-sabor-massa">
+                            <option value="" selected disabled>Escolha o recheio</option>
                             <option value="Carne">Carne</option>
                             <option value="Frango">Frango</option>
                             <option value="Frios">Frios</option>
@@ -92,7 +96,7 @@
                             <option value="Brócolis e Queijo">Brócolis e Queijo</option>
                         </select>
 
-                        <input type="number" id="qtdPastelAssado" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdPastelAssado" min="1">
 
                         <button onclick="adicionarPedido('Pastel Assado', 'selecionePastelAssado', 'qtdPastelAssado', 1.00)"> Adicionar </button>
                     </div>
@@ -107,6 +111,7 @@
                         <p>R$ 1,10 unidade</p>
 
                         <select id="selecionePastelFolhado" class="selecione-sabor-massa">
+                            <option value="" selected disabled>Escolha o recheio</option>
                             <option value="Carne">Carne</option>
                             <option value="Frango">Frango</option>
                             <option value="Frios">Frios</option>
@@ -116,7 +121,7 @@
                             <option value="Brócolis e Queijo">Brócolis e Queijo</option>
                         </select>
 
-                        <input type="number" id="qtdPastelFolhado" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdPastelFolhado" min="1">
 
                         <button onclick="adicionarPedido('Pastel Folhado', 'selecionePastelFolhado', 'qtdPastelFolhado', 1.10)"> Adicionar </button>
                     </div>
@@ -131,11 +136,12 @@
                         <p>R$ 1,30 unidade</p>
 
                         <select id="selecionePastelStrogonoff" class="selecione-sabor-massa">
+                            <option value="" selected disabled>Escolha a massa</option>
                             <option value="Milanesa">Milanesa</option>
                             <option value="Simples">Simples</option>
                         </select>
 
-                        <input type="number" id="qtdPastelStrogonoff" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdPastelStrogonoff" min="1">
 
                         <button onclick="adicionarPedido('Pastel Strogonoff de Carne', 'selecionePastelStrogonoff', 'qtdPastelStrogonoff', 1.30)"> Adicionar </button>
                     </div>
@@ -149,11 +155,11 @@
                         <h2>Coxinha Milanesa</h2>
                         <p>R$ 1,00 unidade</p>
 
-                        <select id="selecioneCoxinha" class="selecione-sabor-massa">
+                        <select id="selecioneCoxinha" class="selecione-sabor-massa" disabled>
                             <option value="Frango">Frango</option>
                         </select>
 
-                        <input type="number" id="qtdCoxinha" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdCoxinha" min="1">
 
                         <button onclick="adicionarPedido('Coxinha Milanesa', 'selecioneCoxinha', 'qtdCoxinha', 1.00)"> Adicionar </button>
                     </div>
@@ -167,11 +173,11 @@
                         <h2>Croquete</h2>
                         <p>R$ 1,00 unidade</p>
 
-                        <select id="selecioneCroquete" class="selecione-sabor-massa">
+                        <select id="selecioneCroquete" class="selecione-sabor-massa" disabled>
                             <option value="Carne">Carne</option>
                         </select>
 
-                        <input type="number" id="qtdCroquete" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdCroquete" min="1">
 
                         <button onclick="adicionarPedido('Croquete', 'selecioneCroquete', 'qtdCroquete', 1.00)"> Adicionar </button>
                     </div>
@@ -185,11 +191,12 @@
                         <h2>Enroladinho</h2>
                         <p>R$1,00 unidade</p>
                         <select id="selecioneEnroladinho" class="selecione-sabor-massa">
+                            <option value="" selected disabled>Escolha a massa</option>
                             <option value="Milanesa">Milanesa</option>
                             <option value="Simples">Simples</option>
                         </select>
 
-                        <input type="number" id="qtdEnroladinho" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdEnroladinho" min="1">
 
                         <button onclick="adicionarPedido('Enroladinho', 'selecioneEnroladinho', 'qtdEnroladinho', 1.00)"> Adicionar </button>
                     </div>
@@ -200,15 +207,15 @@
                             <img src="images/Canapes.jpg" alt="">
                         </div>
                     <div class="info-item">
-                        <h2>Canapés</h2>
+                        <h2>Canapé</h2>
                         <p>R$1,00 unidade</p>
-                        <select id="selecioneCanapes" class="selecione-sabor-massa">
+                        <select id="selecioneCanape" class="selecione-sabor-massa" disabled>
                             <option value="Tradicional">Tradicional</option>
                         </select>
 
-                        <input type="number" id="qtdCanapes" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdCanape" min="1">
 
-                        <button onclick="adicionarPedido('Canapés', 'selecioneCanapes', 'qtdCanapes', 1.00)"> Adicionar </button>
+                        <button onclick="adicionarPedido('Canapé', 'selecioneCanape', 'qtdCanape', 1.00)"> Adicionar </button>
                     </div>
                 </div>
 
@@ -219,11 +226,11 @@
                     <div class="info-item">
                         <h2>Bolinha de Queijo</h2>
                         <p>R$1,00 unidade</p>
-                        <select id="selecioneBolinhaQueijo" class="selecione-sabor-massa">
+                        <select id="selecioneBolinhaQueijo" class="selecione-sabor-massa" disabled>
                             <option value="Milanesa">Milanesa</option>
                         </select>
 
-                        <input type="number" id="qtdBolinaQueijo" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdBolinaQueijo" min="1">
 
                         <button onclick="adicionarPedido('Bolinha de Queijo', 'selecioneBolinhaQueijo', 'qtdBolinaQueijo', 1.00)"> Adicionar </button>
                     </div>
@@ -238,12 +245,13 @@
                         <p>R$ 1,25 unidade</p>
 
                         <select id="selecioneBarquete" class="selecione-sabor-massa">
+                            <option value="" selected disabled>Escolha o recheio</option>
                             <option value="Carne">Carne</option>
                             <option value="Frango">Frango</option>
                             <option value="Frios">Frios</option>
                         </select>
 
-                        <input type="number" id="qtdBarquete" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdBarquete" min="1">
 
                         <button onclick="adicionarPedido('Barquete', 'selecioneBarquete', 'qtdBarquete', 1.25)"> Adicionar </button>
                     </div>
@@ -258,13 +266,14 @@
                         <p>R$ 1,25 unidade</p>
 
                         <select id="selecioneCanudinho" class="selecione-sabor-massa">
+                            <option value="" selected disabled>Escolha o recheio</option>
                             <option value="Carne">Carne</option>
                             <option value="Frango">Frango</option>
                             <option value="Frios">Frios</option>
                             <option value="Maionese de Batata">Maionese de Batata</option>
                         </select>
 
-                        <input type="number" id="qtdCanudinho" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdCanudinho" min="1">
 
                         <button onclick="adicionarPedido('Canudinho', 'selecioneCanudinho', 'qtdCanudinho', 1.25)"> Adicionar </button>
                     </div>
@@ -272,17 +281,17 @@
 
                 <div class="item">
                         <div class="img-item">
-                            <img src="images/mini-hamburguer.webp" alt="">
+                            <img src="images/mini-hamburguer.jpg" alt="">
                         </div>
                     <div class="info-item">
                         <h2>Mini Hambúrguer</h2>
                         <p>R$ 2,50 unidade</p>
 
-                        <select id="selecioneMiniHamburguer" class="selecione-sabor-massa">
-                            <option value="Carne">Carne</option>
+                        <select id="selecioneMiniHamburguer" class="selecione-sabor-massa" disabled>
+                            <option value="Salamito">Salamito</option>
                         </select>
 
-                        <input type="number" id="qtdMiniHamburguer" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdMiniHamburguer" min="1">
 
                         <button onclick="adicionarPedido('Mini Hambúrguer', 'selecioneMiniHamburguer', 'qtdMiniHamburguer', 2.50)"> Adicionar </button>
                     </div>
@@ -296,11 +305,11 @@
                         <h2>Cachorro Quente Pequeno</h2>
                         <p>R$ 1,10 unidade</p>
 
-                        <select id="selecioneCachorroQuentePequeno" class="selecione-sabor-massa">
+                        <select id="selecioneCachorroQuentePequeno" class="selecione-sabor-massa" disabled>
                             <option value="Tradicional">Tradicional</option>
                         </select>
 
-                        <input type="number" id="qtdCachorroQuentePequeno" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdCachorroQuentePequeno" min="1">
 
                         <button onclick="adicionarPedido('Cachorro Quente Pequeno', 'selecioneCachorroQuentePequeno', 'qtdCachorroQuentePequeno', 1.10)"> Adicionar </button>
                     </div>
@@ -314,11 +323,11 @@
                         <h2>Cachorrinho Assado</h2>
                         <p>R$ 1,00 unidade</p>
 
-                        <select id="selecioneCachorrinhoAssado" class="selecione-sabor-massa">
+                        <select id="selecioneCachorrinhoAssado" class="selecione-sabor-massa" disabled>
                             <option value="Tradicional">Tradicional</option>
                         </select>
 
-                        <input type="number" id="qtdCachorrinhoAssado" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdCachorrinhoAssado" min="1">
 
                         <button onclick="adicionarPedido('Cachorrinho Assado', 'selecioneCachorrinhoAssado', 'qtdCachorrinhoAssado', 1.00)"> Adicionar </button>
                     </div>
@@ -332,11 +341,11 @@
                         <h2>Cachorrinho Folhado</h2>
                         <p>R$ 1,10 unidade</p>
 
-                        <select id="selecioneCachorrinhoFolhado" class="selecione-sabor-massa">
+                        <select id="selecioneCachorrinhoFolhado" class="selecione-sabor-massa" disabled>
                             <option value="Tradicional">Tradicional</option>
                         </select>
 
-                        <input type="number" id="qtdCachorrinhoFolhado" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdCachorrinhoFolhado" min="1">
 
                         <button onclick="adicionarPedido('Cachorrinho Folhado', 'selecioneCachorrinhoFolhado', 'qtdCachorrinhoFolhado', 1.10)"> Adicionar </button>
                     </div>
@@ -350,11 +359,11 @@
                         <h2>Sanduíche Aberto</h2>
                         <p>R$ 1,10 unidade</p>
 
-                        <select id="selecioneSanduicheAberto" class="selecione-sabor-massa">
+                        <select id="selecioneSanduicheAberto" class="selecione-sabor-massa" disabled>
                             <option value="Tradicional">Tradicional</option>
                         </select>
 
-                        <input type="number" id="qtdSanduicheAberto" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdSanduicheAberto" min="1">
 
                         <button onclick="adicionarPedido('Sanduíche Aberto', 'selecioneSanduicheAberto', 'qtdSanduicheAberto', 1.10)"> Adicionar </button>
                     </div>
@@ -369,6 +378,7 @@
                         <p>R$ 1,10 unidade</p>
 
                         <select id="selecioneMiniPizza" class="selecione-sabor-massa">
+                            <option value="" selected disabled>Escolha o recheio</option>
                             <option value="Carne">Carne</option>
                             <option value="Frango">Frango</option>
                             <option value="Calabresa">Calabresa</option>
@@ -376,7 +386,7 @@
                             <option value="Milho">Milho</option>
                         </select>
 
-                        <input type="number" id="qtdMiniPizza" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdMiniPizza" min="1">
 
                         <button onclick="adicionarPedido('Mini Pizza', 'selecioneMiniPizza', 'qtdMiniPizza', 1.10)"> Adicionar </button>
                     </div>
@@ -390,11 +400,11 @@
                         <h2>Mini Pizza Strogonoff</h2>
                         <p>R$ 1,35 unidade</p>
 
-                        <select id="selecioneMiniPizzaStrogonoff" class="selecione-sabor-massa">
+                        <select id="selecioneMiniPizzaStrogonoff" class="selecione-sabor-massa" disabled>
                             <option value="Carne">Carne</option>
                         </select>
 
-                        <input type="number" id="qtdMiniPizzaStrogonoff" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdMiniPizzaStrogonoff" min="1">
 
                         <button onclick="adicionarPedido('Mini Pizza Strogonoff', 'selecioneMiniPizzaStrogonoff', 'qtdMiniPizzaStrogonoff', 1.35)"> Adicionar </button>
                     </div>
@@ -412,11 +422,11 @@
                         <h2>Brigadeiro Pequeno</h2>
                         <p>R$ 1,00 unidade</p>
 
-                        <select id="selecioneBrigadeiro" class="selecione-sabor-massa">
+                        <select id="selecioneBrigadeiro" class="selecione-sabor-massa" disabled>
                             <option value="Tradicional">Tradicional</option>
                         </select>
 
-                        <input type="number" id="qtdBrigadeiro" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdBrigadeiro" min="1">
 
                         <button onclick="adicionarPedido('Brigadeiro Pequeno', 'selecioneBrigadeiro', 'qtdBrigadeiro', 1.00)"> Adicionar </button>
                     </div>
@@ -430,11 +440,11 @@
                         <h2>Beijinho Pequeno</h2>
                         <p>R$ 1,00 unidade</p>
 
-                        <select id="selecioneBeijinho" class="selecione-sabor-massa">
+                        <select id="selecioneBeijinho" class="selecione-sabor-massa" disabled>
                             <option value="Tradicional">Tradicional</option>
                         </select>
 
-                        <input type="number" id="qtdBeijinho" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdBeijinho" min="1">
 
                         <button onclick="adicionarPedido('Beijinho Pequeno', 'selecioneBeijinho', 'qtdBeijinho', 1.00)"> Adicionar </button>
                     </div>
@@ -442,17 +452,35 @@
 
                 <div class="item">
                     <div class="img-item">
-                        <img src="images/moranguinho-pequeno.webp" alt="">
+                        <img src="images/doce-de-leite-ninho.jpg" alt="">
+                    </div>
+                    <div class="info-item">
+                        <h2>Doce de Leite Ninho</h2>
+                        <p>R$ 1,10 unidade</p>
+
+                        <select id="selecioneDoceNinho" class="selecione-sabor-massa" disabled>
+                            <option value="Tradicional">Tradicional</option>
+                        </select>
+
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdDoceNinho" min="1">
+
+                        <button onclick="adicionarPedido('Doce de Leite Ninho', 'selecioneDoceNinho', 'qtdDoceNinho', 1.10)"> Adicionar </button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="img-item">
+                        <img src="images/moranguinho-pequeno.jpg" alt="">
                     </div>
                     <div class="info-item">
                         <h2>Moranguinho Pequeno</h2>
                         <p>R$ 1,05 unidade</p>
 
-                        <select id="selecioneMoranguinhoPequeno" class="selecione-sabor-massa">
+                        <select id="selecioneMoranguinhoPequeno" class="selecione-sabor-massa" disabled>
                             <option value="Tradicional">Tradicional</option>
                         </select>
 
-                        <input type="number" id="qtdMoranguinhoPequeno" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdMoranguinhoPequeno" min="1">
 
                         <button onclick="adicionarPedido('Moranguinho Pequeno', 'selecioneMoranguinhoPequeno', 'qtdMoranguinhoPequeno', 1.05)"> Adicionar </button>
                     </div>
@@ -466,11 +494,11 @@
                         <h2>Olho de Sogra Caramelizado</h2>
                         <p>R$ 1,20 unidade</p>
 
-                        <select id="selecioneOlhoDeSograCaramelizado" class="selecione-sabor-massa">
+                        <select id="selecioneOlhoDeSograCaramelizado" class="selecione-sabor-massa" disabled>
                             <option value="Tradicional">Tradicional</option>
                         </select>
 
-                        <input type="number" id="qtdOlhoDeSograCaramelizado" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdOlhoDeSograCaramelizado" min="1">
 
                         <button onclick="adicionarPedido('Olho De Sogra Caramelizado', 'selecioneOlhoDeSograCaramelizado', 'qtdOlhoDeSograCaramelizado', 1.20)"> Adicionar </button>
                     </div>
@@ -484,11 +512,11 @@
                         <h2>Olho de Sogra Açucarado</h2>
                         <p>R$ 1,10 unidade</p>
 
-                        <select id="selecioneOlhoDeSograAcucarado" class="selecione-sabor-massa">
+                        <select id="selecioneOlhoDeSograAcucarado" class="selecione-sabor-massa" disabled>
                             <option value="Tradicional">Tradicional</option>
                         </select>
 
-                        <input type="number" id="qtdOlhoDeSograAcucarado" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdOlhoDeSograAcucarado" min="1">
 
                         <button onclick="adicionarPedido('Olho De Sogra Açucarado', 'selecioneOlhoDeSograAcucarado', 'qtdOlhoDeSograAcucarado', 1.10)"> Adicionar </button>
                     </div>
@@ -502,11 +530,11 @@
                         <h2>Mini Trufa</h2>
                         <p>R$ 1,10 unidade</p>
 
-                        <select id="selecioneMiniTrufa" class="selecione-sabor-massa">
+                        <select id="selecioneMiniTrufa" class="selecione-sabor-massa" disabled>
                             <option value="Tradicional">Tradicional</option>
                         </select>
 
-                        <input type="number" id="qtdMiniTrufa" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdMiniTrufa" min="1">
 
                         <button onclick="adicionarPedido('Mini Trufa', 'selecioneMiniTrufa', 'qtdMiniTrufa', 1.10)"> Adicionar </button>
                     </div>
@@ -520,11 +548,11 @@
                         <h2>Cajuzinho</h2>
                         <p>R$ 1,00 unidade</p>
 
-                        <select id="selecioneCajuzinho" class="selecione-sabor-massa">
+                        <select id="selecioneCajuzinho" class="selecione-sabor-massa" disabled>
                             <option value="Tradicional">Tradicional</option>
                         </select>
 
-                        <input type="number" id="qtdCajuzinho" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdCajuzinho" min="1">
 
                         <button onclick="adicionarPedido('Cajuzinho', 'selecioneCajuzinho', 'qtdCajuzinho', 1.00)"> Adicionar </button>
                     </div>
@@ -538,11 +566,11 @@
                         <h2>Mini Churros</h2>
                         <p>R$ 1,00 unidade</p>
 
-                        <select id="selecioneMiniChurros" class="selecione-sabor-massa">
+                        <select id="selecioneMiniChurros" class="selecione-sabor-massa" disabled>
                             <option value="Tradicional">Tradicional</option>
                         </select>
 
-                        <input type="number" id="qtdMiniChurros" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdMiniChurros" min="1">
 
                         <button onclick="adicionarPedido('Mini Churros', 'selecioneMiniChurros', 'qtdMiniChurros', 1.00)"> Adicionar </button>
                     </div>
@@ -557,11 +585,12 @@
                         <p>R$ 1,25 unidade</p>
 
                         <select id="selecioneBarqueteDoce" class="selecione-sabor-massa">
+                            <option value="" selected disabled>Escolha o recheio</option>
                             <option value="Brigadeiro">Brigadeiro</option>
                             <option value="Brigadeiro">Beijinho</option>
                         </select>
 
-                        <input type="number" id="qtdBarqueteDoce" min="1">
+                        <input type="number" placeholder="Digite a Quantidade" id="qtdBarqueteDoce" min="1">
 
                         <button onclick="adicionarPedido('Barquete Doce', 'selecioneBarqueteDoce', 'qtdBarqueteDoce', 1.25)"> Adicionar </button>
                     </div>

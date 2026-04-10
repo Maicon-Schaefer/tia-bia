@@ -15,17 +15,35 @@ function adicionarPedido(nomeItem, idSabor, idQtd, preco) {
     const sabor = document.getElementById(idSabor).value;
     const qtd = Number(document.getElementById(idQtd).value);
 
-    if (!qtd || qtd <= 0) return;
+    if (!sabor) {
+        mostrarMensagem("Escolha o recheio antes de adicionar.");
+        return;
+    }
 
-    pedido.push({
-        item: nomeItem,
-        sabor,
-        qtd,
-        subtotal: qtd * preco
-    });
+    if (!qtd || qtd <= 0) {
+        mostrarMensagem("Informe a quantidade.");
+        return;
+    }
+
+    const itemExistente = pedido.find(item =>
+        item.item === nomeItem && item.sabor === sabor
+    );
+
+    if (itemExistente) {
+        itemExistente.qtd += qtd;
+        itemExistente.subtotal = itemExistente.qtd * preco;
+    } else {
+        pedido.push({
+            item: nomeItem,
+            sabor,
+            qtd,
+            subtotal: qtd * preco
+        });
+    }
 
     mostrarMensagem(`${nomeItem} (${sabor}) x${qtd} adicionado!`);
 
+    document.getElementById(idQtd).value = "";
     atualizarTotal();
 }
 
@@ -37,16 +55,21 @@ function atualizarTotal() {
     let total = 0;
     let listaHTML = "";
 
-    pedido.forEach(item => {
-        total += item.subtotal;
+    pedido.forEach((item, index) => {
+    total += item.subtotal;
 
-        listaHTML += `
-            <p>${item.item} (${item.sabor}) x${item.qtd} - 
-            R$ ${item.subtotal.toLocaleString("pt-BR", {
-                minimumFractionDigits: 2
-            })}</p>
-        `;
-    });
+    listaHTML += `
+        <div class="item-pedido">
+            <p>
+                ${item.item} (${item.sabor}) x${item.qtd} - 
+                R$ ${item.subtotal.toLocaleString("pt-BR", {
+                    minimumFractionDigits: 2
+                })}
+            </p>
+            <button class="btn-remover" onclick="removerItem(${index})">✖</button>
+        </div>
+    `;
+});
 
     const pagamento = document.getElementById("pagamento").value;
 
@@ -62,6 +85,12 @@ function atualizarTotal() {
         "Total do Pedido: R$ " + total.toLocaleString("pt-BR", {
             minimumFractionDigits: 2
         });
+}
+
+function removerItem(index) {
+    pedido.splice(index, 1);
+    atualizarTotal();
+    mostrarMensagem("Item removido do pedido.");
 }
 
 function validarData() {

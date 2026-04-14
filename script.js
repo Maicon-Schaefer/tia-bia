@@ -209,7 +209,7 @@ if (tipo.includes("Entrega") && endereco.trim() === "") {
 
     mensagem += `%0A*${total}*`;
 
-    const numero = "5551980384887";
+    const numero = "5551996189555";
     const link = `https://wa.me/${numero}?text=${mensagem}`;
 
     window.open(link, "_blank");

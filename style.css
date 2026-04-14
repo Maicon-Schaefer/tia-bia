@@ -173,6 +173,7 @@ header{
 
 .selecione-sabor-massa:disabled{
     background-color: white;
+    padding: 6px 0px 6px 9px;
     color: black;
     opacity: 1;
     cursor: default;
@@ -351,7 +352,7 @@ header{
 footer{
     background-color: gray;
     text-align: center;
-    padding: 5px;
+    padding: 20px;
 }
 
 footer a{

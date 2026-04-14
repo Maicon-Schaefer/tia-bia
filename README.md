@@ -27,8 +27,9 @@ O sistema foi pensado para oferecer uma experiência simples, rápida e responsi
 * 💳 Forma de pagamento
 * 💰 Cálculo automático do valor total
 * 📲 Envio do pedido formatado para WhatsApp
-* 🔔 Notificação visual ao adicionar itens
+* 🔔 Notificação visual ao adicionar e remover itens
 * 🍰 Aviso para encomenda de tortas
+* ❌Remoção de itens do pedido
 
 ---
 

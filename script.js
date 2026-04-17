@@ -202,7 +202,7 @@ if (tipo.includes("Entrega") && endereco.trim() === "") {
     mensagem += `*Itens do Pedido:*%0A`;
 
     pedido.forEach(item => {
-        mensagem += `- ${item.item} (${item.sabor}) x${item.qtd} = R$ ${item.subtotal.toLocaleString("pt-BR", {
+        mensagem += `- ${item.qtd}x ${item.item} (${item.sabor}) = R$ ${item.subtotal.toLocaleString("pt-BR", {
             minimumFractionDigits: 2
         })}%0A`;
     });

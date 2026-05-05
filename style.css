@@ -139,7 +139,7 @@ header{
     text-align: center;
 }
 
-.item h2{
+.item h2, .itemTorta h2{
     font-size: 1em;
     margin-bottom: 5px;
     height: 2em;
@@ -149,19 +149,16 @@ header{
     margin-top: 10px;
 }
 
-.item p, .item label, .item input{
+.item p, .item label, .item input, .itemTorta p, .itemTorta label, .itemTorta input{
     margin-bottom: 10px;
     font-size: 0.8em;
 }
 
-.item input{
+.item input, .itemTorta input{
     border: none;
     border-bottom: 1px solid black;
     outline: none;
     text-align: center;
-}
-
-.item input{
     width: 140px;
 }
 
@@ -182,7 +179,7 @@ header{
     -moz-appearance: none;
 }
 
-.item button{
+.item button, .itemTorta button{
     width: 140px;
     border-radius: 20px;
     background-color: green;
@@ -192,11 +189,66 @@ header{
     cursor: pointer;
 }
 
-.item button:hover{
+.item button:hover, .itemTorta button:hover{
     background-color: #fff;
     color: green;
     border: 1px solid green;
     transition: 0.3s;
+}
+
+/*===== TORTAS =====*/
+.itemTorta{
+    display: flex;
+    width: 35%;
+    min-width: 520px;
+    height: 180px;
+    border: 2px solid rgba(0, 0, 0, 0.151);
+    border-radius: 20px;
+    background-color: white;
+}
+
+.itemTorta .img-item {
+    width: 130px;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.itemTorta .img-item img {
+    width: 100%;
+    max-width: 140px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.itemTorta .info-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 10px;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: center;
+}
+
+.itemTorta .info-item p{
+    margin-top: 0;
+}
+
+.itemTorta .selecione-sabor-massa{
+    margin-bottom: 10px;
+
+    cursor: pointer;
+}
+
+.torta-descricao{
+    width: 30%;
+    min-width: 150px    ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
 }
 
 /*===== FIM CONTEÚDO ====*/
@@ -417,7 +469,9 @@ footer a{
         height: 100%;
         object-fit: cover;
         border-radius: 20px 0 0 20px;
-}
+    }
+
+    
 }
 
 /*==== Telefone ====*/
@@ -467,7 +521,7 @@ footer a{
         align-items: center;
     }
 
-    .item{
+    .item, .itemTorta{
         width: 95%;
         min-width: auto;
         height: 165px;
@@ -489,6 +543,16 @@ footer a{
         border-radius: 20px 0 0 20px;
     }
 
+    .itemTorta .img-item {
+        width: 33%;
+        height: 100%;
+    }
+
+    .itemTorta .img-item img {
+        width: 100%;
+        height: 100%;
+    }
+
     .info-item{
         width: 65%;
         max-width: 65%;
@@ -498,7 +562,11 @@ footer a{
         box-sizing: border-box;
     }
 
-    .item h2{
+    .selecione-sabor-massa{
+        font-size: 0.8em;
+    }
+
+    .item h2, .itemTorta h2{
         font-size: 0.9em;
         margin: 0px 0px 4px 0px;
         line-height: 1.1;
@@ -506,7 +574,7 @@ footer a{
 
     .info-item p{
         margin: 2px 0;
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
 
     .info-item input{
@@ -514,20 +582,31 @@ footer a{
     }
 
     .selecione-sabor-massa,
-    .item input,
-    .item button{
+    .item input, .itemTorta input,
+    .item button, .itemTorta button{
         width: 100%;
         box-sizing: border-box;
         padding: 6px;
     }
 
-    .item input,
-    .selecione-sabor-massa{
+    .item input, .itemTorta input{
         font-size: 16px;
     }
 
-    .item button{
+    .item button, .itemTorta button{
         font-size: 14px;
+    }
+
+    .torta-descricao{
+        width: 42%;
+        min-width: 0px    ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0px 6px 3px 1px;
+        font-size: 1em;
+        margin: 0 auto;
     }
 
     #pedido-conteudo{

@@ -597,6 +597,73 @@
                 </div>
 
             </div> <!--Fim Conteúdo Itens (DOCES)-->
+
+            <h2 class="categoria">Tortas</h2>
+            <div class="conteudo-itens"> <!--Início Conteúdo Itens (DOCES)-->
+                <div class="itemTorta">
+                        <div class="img-item">
+                            <img src="images/torta-simples.jpg" alt="">
+                        </div>
+                    <div class="info-item">
+                        <h2>Torta Simples</h2>
+                        <p>R$ 39,90kg</p>
+
+                        <select id="selecioneTortaSimples" class="selecione-sabor-massa" onchange="atualizarDescricaoTorta(this)">
+                            <option value="" selected disabled>Sabor</option>
+                            <option value="Cappuccino">Cappuccino</option>
+                            <option value="Bia">Bia</option>
+                            <option value="Brigadeiro">Brigadeiro</option>
+                            <option value="Prestígio">Prestígio</option>
+                            <option value="Chocolate">Chocolate</option>
+                            <option value="Mousse">Mousse</option>
+                            <option value="Bombom">Bombom</option>
+                            <option value="Leite Condensado">Leite Condensado</option>
+                        </select>
+
+                        <input type="number" placeholder="Digite o Kg" id="qtdTortaSimples" min="1">
+
+                        <button onclick="adicionarPedido('Torta Simples', 'selecioneTortaSimples', 'qtdTortaSimples', 39.90)"> Adicionar </button>
+                    </div>
+
+                    <div class="torta-descricao">
+                        <p class="descricaoTorta">Escolha o sabor para visualizar os Ingredientes!</p>
+                    </div>
+                </div>
+
+                <div class="itemTorta">
+                        <div class="img-item">
+                            <img src="images/torta-especial.jpg" alt="">
+                        </div>
+                    <div class="info-item">
+                        <h2>Torta Especial</h2>
+                        <p>R$ 49,90kg</p>
+
+                        <select id="selecioneTortaEspecial" class="selecione-sabor-massa" onchange="atualizarDescricaoTorta(this)">
+                            <option value="" selected disabled>Sabor</option>
+                            <option value="Tentação">Tentação</option>
+                            <option value="Rose">Rose</option>
+                            <option value="Dois Amores">Dois Amores</option>
+                            <option value="Leite Ninho">Leite Ninho</option>
+                            <option value="Daia">Daia</option>
+                            <option value="Pamela">Pamela</option>
+                            <option value="Floresta Negra">Floresta Negra</option>
+                            <option value="Surpresa">Surpresa</option>
+                            <option value="Marta Rocha">Marta Rocha</option>
+                            <option value="Água na Boca">Água na boca</option>
+                        </select>
+
+                        <input type="number" placeholder="Digite o Kg" id="qtdTortaEspecial" min="1">
+
+                        <button onclick="adicionarPedido('Torta Especial', 'selecioneTortaEspecial', 'qtdTortaEspecial', 49.90)"> Adicionar </button>
+                    </div>
+
+                    <div class="torta-descricao">
+                        <p class="descricaoTorta">Escolha o sabor para visualizar os ingredientes!</p>
+                    </div>
+                </div>
+
+            </div> <!--Fim Conteúdo Itens (DOCES)-->
+            
         </div> <!--Fim Conteúdo-->
 
         <div id="informacoes-pedido"> <!-- Início Informações Pedido-->
@@ -649,7 +716,7 @@
                     <a id="btnWhatsapp" onclick="enviarPedidoWhatsapp()" target="_blank"> Enviar Pedido</a>
                 </div> <!-- Fim Pedido Conteúdo-->
 
-                <h3 class="aviso-tortas">Tortas podem ser encomendadas via WhatsApp!</h3>
+                <h3 class="aviso-tortas">Para montar ou personalizar sua torta, favor consultar no whatsapp!</h3>
         </div> <!-- Fim Informações Pedido-->
     </main> <!--Fim Main-->
 

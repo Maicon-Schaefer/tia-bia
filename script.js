@@ -25,6 +25,11 @@ function adicionarPedido(nomeItem, idSabor, idQtd, preco) {
         return;
     }
 
+    if (nomeItem === "Torta Simples" && qtd < 1.5 || nomeItem === "Torta Especial" && qtd < 1.5){
+        mostrarMensagem("O pedido mínimo da torta é 1,5kg");
+        return
+    }
+
     const itemExistente = pedido.find(item =>
         item.item === nomeItem && item.sabor === sabor
     );
@@ -41,7 +46,7 @@ function adicionarPedido(nomeItem, idSabor, idQtd, preco) {
         });
     }
 
-    mostrarMensagem(`${nomeItem} (${sabor}) x${qtd} adicionado!`);
+    mostrarMensagem(`${nomeItem.includes("Torta") ? qtd + "kg" : qtd + "x"} ${nomeItem} (${sabor}) adicionado!`);
 
     document.getElementById(idQtd).value = "";
     atualizarTotal();
@@ -61,7 +66,7 @@ function atualizarTotal() {
     listaHTML += `
         <div class="item-pedido">
             <p>
-                ${item.item} (${item.sabor}) x${item.qtd} - 
+                ${item.item.includes("Torta") ? item.qtd + "kg" : item.qtd + "x"} ${item.item} (${item.sabor}) - 
                 R$ ${item.subtotal.toLocaleString("pt-BR", {
                     minimumFractionDigits: 2
                 })}
@@ -186,31 +191,92 @@ if (tipo.includes("Entrega") && endereco.trim() === "") {
     return;
 }
 
-    let mensagem = `${saudacaoHorario()}! Gostaria de fazer um pedido.%0A%0A`;
+let mensagem = `${saudacaoHorario()}! Gostaria de fazer um pedido.%0A%0A`;
 
-    mensagem += `*Nome:* ${nome}%0A`;
-    mensagem += `*Telefone:* ${telefone}%0A`;
-    mensagem += `*Data e Hora:* ${dataHora}%0A`;
-    mensagem += `*Tipo:* ${tipo}%0A`;
+const diasSemana = ["Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sábado"];
+const diaSemana = diasSemana[dataObj.getDay()];
 
-    if (tipo.includes("Entrega")) {
-        mensagem += `*Endereço:* ${endereco}%0A`;
+mensagem += `*Nome:* ${nome}%0A`;
+mensagem += `*Telefone:* ${telefone}%0A`;
+mensagem += `*Data e Hora:* ${dataHora} - ${diaSemana}%0A`;
+mensagem += `*Tipo:* ${tipo}%0A`;
+
+if (tipo.includes("Entrega")) {
+    mensagem += `*Endereço:* ${endereco}%0A`;
+}
+
+    mensagem += `*Pagamento:* ${pagamento}%0A`;
+
+    let tortas = "";
+    let outros = "";
+
+pedido.forEach(item => {
+    const linha = `- ${item.item.includes("Torta") ? item.qtd + "kg" : item.qtd + "x"} ${item.item} (${item.sabor}) = R$ ${item.subtotal.toLocaleString("pt-BR", {
+        minimumFractionDigits: 2
+    })}%0A`;
+
+    if (item.item.includes("Torta")) {
+        tortas += linha;
+    } else {
+        outros += linha;
     }
+});
 
-    mensagem += `*Pagamento:* ${pagamento}%0A%0A`;
+if (tortas) {
+    mensagem += `━━━━━━━━━━━━━━━%0A`;
+    mensagem += `*TORTAS*%0A`;
+    mensagem += `━━━━━━━━━━━━━━━%0A`;
+    mensagem += tortas;
+}
 
-    mensagem += `*Itens do Pedido:*%0A`;
+if (outros) {
+    mensagem += `━━━━━━━━━━━━━━━%0A`;
+    mensagem += `*SALGADOS E DOCES*%0A`;
+    mensagem += `━━━━━━━━━━━━━━━%0A`;
+    mensagem += outros;
+}
 
-    pedido.forEach(item => {
-        mensagem += `- ${item.qtd}x ${item.item} (${item.sabor}) = R$ ${item.subtotal.toLocaleString("pt-BR", {
-            minimumFractionDigits: 2
-        })}%0A`;
-    });
-
-    mensagem += `%0A*${total}*`;
+    mensagem += `━━━━━━━━━━━━━━━%0A`;
+    mensagem += `*Total do Pedido = ${total.replace("Total do Pedido: ", "")}*`;
 
     const numero = "5551996189555";
     const link = `https://wa.me/${numero}?text=${mensagem}`;
 
     window.open(link, "_blank");
+}
+
+const descricoesTortas = {
+    "Cappuccino": "Ingredientes:\n\nNata, raspa de chocolate e mousse de café",
+    "Bia": "Ingredientes:\n\nCreme de chantilly, bombom, leite condensado e coco",
+    "Brigadeiro": "Ingredientes:\n\nNata, raspas de chocolate e brigadeiro",
+    "Prestígio": "Ingredientes:\n\nBolo chocolate, prestígio, leite condensado e coco branco",
+    "Chocolate": "Ingredientes:\n\nNata, bombom, merengada e leite condensado",
+    "Mousse": "Ingredientes:\n\nNata, raspas de chocolate, mousse de chocolate branco e mousse de chocolate",
+    "Bombom": "Ingredientes:\n\nNata, bombom e brigadeiro",
+    "Leite Condensado": "Ingredientes:\n\nNata, bombom e leite condensado",
+    "Tentação": "Ingredientes:\n\nNata, morango, merengada e leite condensado",
+    "Rose": "Ingredientes:\n\nNata, nozes, merengada e pudim",
+    "Dois Amores": "Ingredientes:\n\nGanache Nestlé e ganache chocolate branco",
+    "Leite Ninho": "Ingredientes:\n\nNata, morango e brigadeiro de leite ninho",
+    "Daia": "Ingredientes:\n\nNata, morango, leite condensado e raspas de chocolate",
+    "Pamela": "Ingredientes:\n\nCreme de chantilly, morango e brigadeiro",
+    "Floresta Negra": "Ingredientes:\n\nChanrilly, morango e brigadeiro",
+    "Surpresa": "Ingredientes:\n\nNata, morango e mousse de chocolate",
+    "Marta Rocha": "Ingredientes:\n\nNata, pêssego, merengada e ovos moles",
+    "Água na Boca": "Ingredientes:\n\nTrês camadas de nata, morango e pão de ló",
+
+};
+
+function atualizarDescricaoTorta(select) {
+    const sabor = select.value;
+
+    const itemTorta = select.closest(".itemTorta");
+
+    const descricao = itemTorta.querySelector(".descricaoTorta");
+
+    if (descricoesTortas[sabor]) {
+        descricao.innerText = descricoesTortas[sabor];
+    } else {
+        descricao.innerText = "Escolha o sabor para visualizar os componentes";
+    }
 }
